@@ -46,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Passageiros.cs" />
-    <Compile Include="Controllers\Veiculos.cs" />
+    <Compile Include="Controllers\TerminalController.cs" />
     <Compile Include="Controllers\Viagens.cs" />
     <Compile Include="Models\Passageiro.cs" />
     <Compile Include="Models\Veiculo.cs" />

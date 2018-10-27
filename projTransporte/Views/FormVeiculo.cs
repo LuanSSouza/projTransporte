@@ -13,7 +13,7 @@ namespace projTransporte.Views
 {
     partial class FormVeiculo : Form
     {
-        public Veiculos veiculos;
+        public TerminalController terminal;
 
         public FormVeiculo()
         {
@@ -26,7 +26,7 @@ namespace projTransporte.Views
             string motorista = txtMotorista.Text;
             int lotacao = Int32.Parse(txtLotacao.Text);
             // Cadastrando veículos no terminal
-            this.veiculos.cadastrar(placa, motorista, lotacao);
+            this.terminal.cadastrarVeiculo(placa, motorista, lotacao);
             // Fechando janela e liberando recursos
             this.Dispose();
         }

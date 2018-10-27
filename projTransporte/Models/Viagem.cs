@@ -33,5 +33,10 @@ namespace projTransporte.Models
             Viagem viagem = (Viagem)obj;
             return this.id.Equals(viagem.id);
         }
+
+        public override string ToString()
+        {
+            return Id +" - " + VeiculoViagem.Placa + " - " + DataHora + " - " + Passageiros.Count;
+        }
     }
 }

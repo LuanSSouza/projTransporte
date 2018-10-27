@@ -14,62 +14,66 @@ namespace projTransporte.Views
 
     public partial class Terminal : Form
     {
-        Passageiros passageiros;
-        Veiculos veiculos;
-        Viagens viagens;
+        TerminalController terminal;
 
         public Terminal()
         {
             InitializeComponent();
 
-            passageiros = new Passageiros();
-            veiculos = new Veiculos();
-            viagens = new Viagens();
+            terminal = new TerminalController();
         }
 
         private void btnCadastrarPassageiros_Click(object sender, EventArgs e)
         {
             FormPassageiro formPassageiro = new FormPassageiro();
-            formPassageiro.passageiros = this.passageiros;
+            formPassageiro.terminal = terminal;
             formPassageiro.ShowDialog();
-            txtPassageiros.Text = passageiros.FilaEmbarque.Count.ToString();
+            txtPassageiros.Text = terminal.FilaEmbarque.Count.ToString();
+            txtVeiculos.Text = terminal.FilaVeiculos.Count.ToString();
         }
 
         private void btnCadastrarVeiculos_Click(object sender, EventArgs e)
         {
             FormVeiculo formVeiculo = new FormVeiculo();
-            formVeiculo.veiculos = this.veiculos;
+            formVeiculo.terminal = terminal;
             formVeiculo.ShowDialog();
-            txtVeiculos.Text = veiculos.ListaVeiculos.Count.ToString();
+            txtVeiculos.Text = terminal.FilaVeiculos.Count.ToString();
         }
 
         private void btnListarPassageiros_Click(object sender, EventArgs e)
         {
+            lbxLista.Items.Clear();
+
+            terminal.FilaEmbarque.ToList().ForEach( p =>  lbxLista.Items.Add(p.ToString()));
         }
 
         private void btnListarVeiculos_Click(object sender, EventArgs e)
         {
             lbxLista.Items.Clear();
 
-            for(int i = 0; i < veiculos.ListaVeiculos.Count; i++)
-            {
-                lbxLista.Items.Add(veiculos.ListaVeiculos[i].ToString());
-            }
+            terminal.FilaVeiculos.ToList().ForEach( v => lbxLista.Items.Add(v.ToString()));
         }
 
         private void btnListarViagens_Click(object sender, EventArgs e)
         {
             lbxLista.Items.Clear();
 
-            for (int i = 0; i < viagens.ListaViagem.Count; i++)
-            {
-                lbxLista.Items.Add(viagens.ListaViagem [i].ToString());
-            }
+            terminal.Viagens.ListaViagem.ForEach(v => lbxLista.Items.Add(v.ToString()));
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             lbxLista.Items.Clear();
+        }
+
+        private void btnDetalhar_Click(object sender, EventArgs e)
+        {
+            lbxLista.Items.Clear();
+            int id = Int32.Parse(txtViagem.Text);
+            string viagem = terminal.Viagens.pesquisar(id).ToString();
+            lbxLista.Items.Add(viagem);
+            lbxLista.Items.Add("Passageiros: ");
+            terminal.Viagens.pesquisar(id).Passageiros.ForEach(p => lbxLista.Items.Add(p.ToString()));
         }
     }
 }

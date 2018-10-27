@@ -42,8 +42,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnListarViagens = new System.Windows.Forms.Button();
             this.btnDetalhar = new System.Windows.Forms.Button();
-            this.lblViagens = new System.Windows.Forms.Label();
             this.txtViagem = new System.Windows.Forms.TextBox();
+            this.lblViagens = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.pnlPassageiro.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -187,6 +187,15 @@
             this.btnDetalhar.TabIndex = 2;
             this.btnDetalhar.Text = "Detalhar";
             this.btnDetalhar.UseVisualStyleBackColor = true;
+            this.btnDetalhar.Click += new System.EventHandler(this.btnDetalhar_Click);
+            // 
+            // txtViagem
+            // 
+            this.txtViagem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViagem.Location = new System.Drawing.Point(131, 7);
+            this.txtViagem.Name = "txtViagem";
+            this.txtViagem.Size = new System.Drawing.Size(101, 26);
+            this.txtViagem.TabIndex = 1;
             // 
             // lblViagens
             // 
@@ -197,14 +206,6 @@
             this.lblViagens.Size = new System.Drawing.Size(77, 19);
             this.lblViagens.TabIndex = 0;
             this.lblViagens.Text = "Viagens:";
-            // 
-            // txtViagem
-            // 
-            this.txtViagem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtViagem.Location = new System.Drawing.Point(131, 7);
-            this.txtViagem.Name = "txtViagem";
-            this.txtViagem.Size = new System.Drawing.Size(101, 26);
-            this.txtViagem.TabIndex = 1;
             // 
             // btnLimpar
             // 

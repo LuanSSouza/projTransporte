@@ -13,7 +13,7 @@ namespace projTransporte.Views
 {
     partial class FormPassageiro : Form
     {
-        public Passageiros passageiros;
+        public TerminalController terminal;
 
         public FormPassageiro()
         {
@@ -22,9 +22,10 @@ namespace projTransporte.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            int inscricao = Int32.Parse(txtInscricao.Text);
             string nome = txtNome.Text;
             // Adicionando passageiros a fila de Embarque
-            this.passageiros.adicionar(nome);
+            this.terminal.checkin(inscricao, nome);
 
             MessageBox.Show("Veículo cadastrado!", "Sucesso!");
 
