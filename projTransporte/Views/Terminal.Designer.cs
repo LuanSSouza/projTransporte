@@ -40,9 +40,9 @@
             this.lblVeiculos = new System.Windows.Forms.Label();
             this.lbxLista = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnListarViagens = new System.Windows.Forms.Button();
             this.btnDetalhar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblViagens = new System.Windows.Forms.Label();
             this.txtViagem = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.pnlPassageiro.SuspendLayout();
@@ -69,6 +69,7 @@
             this.btnListarPassageiros.TabIndex = 3;
             this.btnListarPassageiros.Text = "Listar";
             this.btnListarPassageiros.UseVisualStyleBackColor = true;
+            this.btnListarPassageiros.Click += new System.EventHandler(this.btnListarPassageiros_Click);
             // 
             // btnCadastrarPassageiros
             // 
@@ -118,6 +119,7 @@
             this.btnListarVeiculos.TabIndex = 3;
             this.btnListarVeiculos.Text = "Listar";
             this.btnListarVeiculos.UseVisualStyleBackColor = true;
+            this.btnListarVeiculos.Click += new System.EventHandler(this.btnListarVeiculos_Click);
             // 
             // btnCadastrarVeiculos
             // 
@@ -158,23 +160,24 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnListar);
+            this.panel2.Controls.Add(this.btnListarViagens);
             this.panel2.Controls.Add(this.btnDetalhar);
             this.panel2.Controls.Add(this.txtViagem);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblViagens);
             this.panel2.Location = new System.Drawing.Point(12, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 90);
             this.panel2.TabIndex = 6;
             // 
-            // btnListar
+            // btnListarViagens
             // 
-            this.btnListar.Location = new System.Drawing.Point(146, 49);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListarViagens.Location = new System.Drawing.Point(146, 49);
+            this.btnListarViagens.Name = "btnListarViagens";
+            this.btnListarViagens.Size = new System.Drawing.Size(75, 23);
+            this.btnListarViagens.TabIndex = 3;
+            this.btnListarViagens.Text = "Listar";
+            this.btnListarViagens.UseVisualStyleBackColor = true;
+            this.btnListarViagens.Click += new System.EventHandler(this.btnListarViagens_Click);
             // 
             // btnDetalhar
             // 
@@ -185,15 +188,15 @@
             this.btnDetalhar.Text = "Detalhar";
             this.btnDetalhar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblViagens
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Viagens:";
+            this.lblViagens.AutoSize = true;
+            this.lblViagens.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViagens.Location = new System.Drawing.Point(32, 10);
+            this.lblViagens.Name = "lblViagens";
+            this.lblViagens.Size = new System.Drawing.Size(77, 19);
+            this.lblViagens.TabIndex = 0;
+            this.lblViagens.Text = "Viagens:";
             // 
             // txtViagem
             // 
@@ -211,6 +214,7 @@
             this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Terminal
             // 
@@ -248,10 +252,10 @@
         private System.Windows.Forms.Label lblVeiculos;
         private System.Windows.Forms.ListBox lbxLista;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnListarViagens;
         private System.Windows.Forms.Button btnDetalhar;
         private System.Windows.Forms.TextBox txtViagem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblViagens;
         private System.Windows.Forms.Button btnLimpar;
     }
 }

@@ -27,5 +27,10 @@ namespace projTransporte.Models
             Veiculo veiculo = (Veiculo)obj;
             return this.placa.Equals(veiculo.placa);
         }
+
+        public override string ToString()
+        {
+            return Placa + " - " + Motorista + " - " + Lotacao;
+        }
     }
 }

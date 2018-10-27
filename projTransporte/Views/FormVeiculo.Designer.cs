@@ -31,7 +31,7 @@
             this.lblPlaca = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.lblMotorista = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMotorista = new System.Windows.Forms.TextBox();
             this.txtLotacao = new System.Windows.Forms.TextBox();
             this.lblLotacao = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -65,13 +65,13 @@
             this.lblMotorista.TabIndex = 2;
             this.lblMotorista.Text = "Motorista:";
             // 
-            // textBox1
+            // txtMotorista
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(89, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtMotorista.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotorista.Location = new System.Drawing.Point(89, 60);
+            this.txtMotorista.Name = "txtMotorista";
+            this.txtMotorista.Size = new System.Drawing.Size(132, 22);
+            this.txtMotorista.TabIndex = 3;
             // 
             // txtLotacao
             // 
@@ -99,8 +99,9 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // Veiculo
+            // FormVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,11 +109,11 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtLotacao);
             this.Controls.Add(this.lblLotacao);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMotorista);
             this.Controls.Add(this.lblMotorista);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.lblPlaca);
-            this.Name = "Veiculo";
+            this.Name = "FormVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Veiculo";
             this.ResumeLayout(false);
@@ -125,7 +126,7 @@
         private System.Windows.Forms.Label lblPlaca;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label lblMotorista;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMotorista;
         private System.Windows.Forms.TextBox txtLotacao;
         private System.Windows.Forms.Label lblLotacao;
         private System.Windows.Forms.Button btnSalvar;
