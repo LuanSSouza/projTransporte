@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projTransporte
+namespace projTransporte.Views
 {
-    public partial class Form1 : Form
+    public partial class FormVeiculo : Form
     {
-        public Form1()
+        public FormVeiculo()
         {
             InitializeComponent();
         }
